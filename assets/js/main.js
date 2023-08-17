@@ -254,5 +254,16 @@
 			});
 
 		}
-
+		document.querySelectorAll('.read-more-btn').forEach(function(button) {
+			button.addEventListener('click', function() {
+			  var details = button.nextElementSibling;
+			  if (details.classList.contains('hidden')) {
+				details.classList.remove('hidden');
+			  } else {
+				details.classList.add('hidden');
+			  }
+			});
+		  });
+		  
+		  
 })(jQuery);

@@ -4687,3 +4687,102 @@ input, select, textarea {
 		}
 
 	}
+
+
+
+/* ... your existing CSS ... */
+
+/* Keyframes for traveling light effect */
+@keyframes travelingLight {
+    0% {
+        top: 0;
+        left: 0;
+        right: auto;
+        bottom: auto;
+    }
+    25% {
+        top: 0;
+        right: 0;
+        left: auto;
+        bottom: auto;
+    }
+    50% {
+        right: 0;
+        bottom: 0;
+        top: auto;
+        left: auto;
+    }
+    75% {
+        bottom: 0;
+        left: 0;
+        top: auto;
+        right: auto;
+    }
+    100% {
+        top: 0;
+        left: 0;
+        right: auto;
+        bottom: auto;
+    }
+}
+
+
+/* Thumbs Up Counter Styles */
+.thumbs-up {
+    font-size: 24px;
+    cursor: pointer;
+    color: #4CAF50; /* You can adjust the color to your preference */
+    margin-bottom: 8px; /* Add a little spacing below the thumbs-up icon */
+}
+
+.counter {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.project-section p {
+    font-size: 18px;          /* Adjust based on your preference */
+    color: #666;             /* Adjust based on your preference */
+    line-height: 2.5;        /* Spacing between lines of text */
+    margin: 0; 
+	              /* Remove default margin */
+}
+
+.emoji {
+    margin-right: 10px;
+}
+.hidden {
+	display: none;
+  }
+✅, .read-more-btn, .project-details p {
+    text-align: left !important;
+}
+@keyframes blinkingColors {
+    0% { color: #3498db; }
+    20% { color: #e74c3c; }
+    40% { color: #2ecc71; }
+    60% { color: #f39c12; }
+    80% { color: #8e44ad; }
+    100% { color: #3498db; }
+}
+
+.read-more-btn {
+    background-color: transparent;
+    border: 1px solid #3498db;  /* Border for visibility */
+    padding: 10px 15px; /* Vertical and Horizontal padding */
+    font-size: 14px;
+    cursor: pointer; 
+    outline: none; 
+    text-decoration: none; 
+    animation: blinkingColors 1.5s infinite; /* Applying the color blinking animation */
+    border-radius: 4px; /* Optional: Gives a slight rounded corner */
+    transition: all 0.3s; /* Smoothens the hover effect */
+}
+
+/* Hover effect: Changes the background and text color when you hover over the button */
+.read-more-btn:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Ghulam Murtaza: ML Architect</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}" /></noscript>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper" class="fade-in">
+
+    <!-- Intro -->
+    <div id="intro">
+        <h1>Ghulam Murtaza Portfolio</h1>
+        <p>Dedicated to harnessing the power of data through Machine Learning. Showcasing a range of ML models, algorithms, and applications. Connect with me on <a href="https://www.linkedin.com/in/ghulam-murtaza-ms-310741110/">@My_Linkedin</a>.</p>
+        <ul class="actions">
+            <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+        </ul>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html" class="logo">Murtaza: ML Architect</a>
+    </header>
+
+    <!-- Main Content -->
+<!-- Main Content -->
+
+    <main id="main">
+        <h2>Twitter Analysis Scraper</h2>
+        
+        <!-- Description section -->
+        <p>This tool provides an analysis of the past 100 tweets from any public figure. It will shed light on the kind of words they use frequently, the organizations they mention, and the topics they discuss the most.</p>
+    
+        <p>To begin the analysis, simply enter the Twitter username of the public figure you want to analyze. Make sure to exclude the "@" symbol from the username.</p>
+    
+        <!-- Here you can place a form to collect the username and start the analysis -->
+        <form action="/get_tweets" method="post">
+            <label for="username">Enter Twitter Username:</label>
+            <input type="text" id="username" name="username" required placeholder="e.g. realDonaldTrump">
+            <input type="submit" value="Analyze Tweets">
+        </form>
+    
+        <!-- This is where you can display the results or any additional information -->
+        <div class="results-section">
+            <!-- Results will appear here -->
+        </div>
+    </main>
+    
+    
+  
+</main>
+
+
+</div>
+
+<!-- Scripts -->
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.scrollex.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+
+</body>
+</html>

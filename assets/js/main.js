@@ -280,3 +280,15 @@ const firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+var likeCountRef = firebase.database().ref('likeCount');
+
+likeCountRef.on('value', (snapshot) => {
+    const count = snapshot.val() || 0;
+    document.querySelector('.counter').innerText = count;
+});
+function incrementCounter(element) {
+    likeCountRef.transaction((currentCount) => {
+        return (currentCount || 0) + 1;
+    });
+}
+

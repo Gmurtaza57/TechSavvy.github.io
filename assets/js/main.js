@@ -267,3 +267,16 @@
 		  
 		  
 })(jQuery);
+// Firebase Configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyAr7CIPfx4JLa8PeL823ZuHU5NEIv07-R0",
+    authDomain: "thumbsup-1c73e.firebaseapp.com",
+    projectId: "thumbsup-1c73e",
+    storageBucket: "thumbsup-1c73e.appspot.com",
+    messagingSenderId: "706794364991",
+    appId: "1:706794364991:web:c06c9251b11a99ab71d88a",
+    measurementId: "G-0VLXHQXY1P"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);

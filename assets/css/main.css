@@ -4786,3 +4786,12 @@ input, select, textarea {
 }
 
 
+.thumbs-up {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.counter {
+    font-size: 20px;
+}

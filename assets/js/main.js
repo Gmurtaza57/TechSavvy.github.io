@@ -280,15 +280,37 @@ const firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-var likeCountRef = firebase.database().ref('likeCount');
 
-likeCountRef.on('value', (snapshot) => {
-    const count = snapshot.val() || 0;
-    document.querySelector('.counter').innerText = count;
-});
 function incrementCounter(element) {
-    likeCountRef.transaction((currentCount) => {
-        return (currentCount || 0) + 1;
+    var firebaseRef = firebase.database().ref('likes');
+    
+    let articleId = element.getAttribute('data-id'); // e.g., "like1"
+    
+    var articleRef = firebaseRef.child(articleId);
+
+    // Increment the count in the database
+    articleRef.transaction(function(currentCount) {
+        return (currentCount || 0) + 1; // Ensure it handles null/undefined values
     });
+
+    // Update the display on the page (this can also be done with Firebase listeners)
+    let counterElement = document.querySelector(`.counter[data-id="${articleId}"]`);
+    let currentCount = parseInt(counterElement.innerText, 10);
+    counterElement.innerText = currentCount + 1;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var firebaseRef = firebase.database().ref('likes');
+
+    firebaseRef.on('value', function(snapshot) {
+        snapshot.forEach(function(childSnapshot) {
+            let articleId = childSnapshot.key;
+            let count = childSnapshot.val();
+            
+            let counterElement = document.querySelector(`.counter[data-id="${articleId}"]`);
+            counterElement.innerText = count;
+        });
+    });
+});
+
 

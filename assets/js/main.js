@@ -267,7 +267,7 @@
 		  
 		  
 })(jQuery);
-// Firebase Configuration
+// Your Firebase config object
 const firebaseConfig = {
     apiKey: "AIzaSyAr7CIPfx4JLa8PeL823ZuHU5NEIv07-R0",
     authDomain: "thumbsup-1c73e.firebaseapp.com",
@@ -283,20 +283,23 @@ firebase.initializeApp(firebaseConfig);
 
 function incrementCounter(element) {
     var firebaseRef = firebase.database().ref('likes');
-    
-    let articleId = element.getAttribute('data-id'); // e.g., "like1"
-    
+
+    let articleId = element.getAttribute('data-id');
+
     var articleRef = firebaseRef.child(articleId);
 
-    // Increment the count in the database
+    // Increment the count in the database and handle potential errors
     articleRef.transaction(function(currentCount) {
-        return (currentCount || 0) + 1; // Ensure it handles null/undefined values
+        return (currentCount || 0) + 1;
+    }, function(error, committed, snapshot) {
+        if (error) {
+            console.log('Transaction failed abnormally!', error);
+        } else if (!committed) {
+            console.log('Transaction aborted (because of another concurrent transaction).');
+        } else {
+            console.log('Like count updated!');
+        }
     });
-
-    // Update the display on the page (this can also be done with Firebase listeners)
-    let counterElement = document.querySelector(`.counter[data-id="${articleId}"]`);
-    let currentCount = parseInt(counterElement.innerText, 10);
-    counterElement.innerText = currentCount + 1;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -306,11 +309,12 @@ document.addEventListener('DOMContentLoaded', function() {
         snapshot.forEach(function(childSnapshot) {
             let articleId = childSnapshot.key;
             let count = childSnapshot.val();
-            
+
             let counterElement = document.querySelector(`.counter[data-id="${articleId}"]`);
             counterElement.innerText = count;
         });
     });
 });
+
 
 

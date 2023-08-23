@@ -304,16 +304,23 @@ function incrementCounter(element) {
 
 document.addEventListener('DOMContentLoaded', function() {
     var firebaseRef = firebase.database().ref('likes');
-
-    firebaseRef.on('value', function(snapshot) {
-        snapshot.forEach(function(childSnapshot) {
-            let articleId = childSnapshot.key;
-            let count = childSnapshot.val();
-
-            let counterElement = document.querySelector(`.counter[data-id="${articleId}"]`);
+	firebaseRef.on('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+        let articleId = childSnapshot.key;
+        let count = childSnapshot.val();
+        
+        console.log(`Updating counter for: ${articleId} with value: ${count}`);
+        
+        let counterElement = document.querySelector(`.counter[data-id="${articleId}"]`);
+        if (counterElement) {
             counterElement.innerText = count;
-        });
+        } else {
+            console.warn(`No counter element found for ${articleId}`);
+        }
     });
+});
+
+
 });
 
 

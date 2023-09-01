@@ -119,8 +119,12 @@
     <p>🛠 • Configured an ECS <strong>Task Definition for AWS Fargate</strong>.</p>
     <p>📡 • Created an ECS Cluster for Fargate.</p>
     <p>🚢 • Launched a Service using Fargate, involving configurations including VPC, security groups, and other network settings.</p>
-    <p>🔌 • Utilized the <strong>Application Load Balancer (ALB)</strong> to activate the app during traffic periods, reducing the cost of continuous service. This approach saved $48 out of $55.</p>
+    <p>🔌 • Utilized the <strong>Application Load Balancer (ALB)</strong> to activate the app when API gateway is triggered and only runs for 20 minutes after task started to save cost of  $512 running 24 hours</p>
     <p>💾 • For computational resources, allocated 4 vCPUs, set a soft memory limit of 18 GiB RAM, and a hard limit of 20 GiB RAM.</p>
+    <p>📡 • Implemented a dynamic loading process using <strong>Amazon API Gateway</strong> and <strong>AWS Lambda</strong> functions. When a user visits the loading page, a Lambda function is triggered, which in turn starts the Flask app on Fargate.</p>
+    <p>⏱ • Added a timed delay of 1.5 minutes during the loading process, providing users with a status update , ensuring they are aware the task is starting.</p>
+    <p>🚀 • Implemented <strong>AWS Network Load Balancer</strong> to manage dynamic IP issues for the Flask app running on Fargate. This ensures a consistent ip address for for reliable connection to users.</p>
+    <p>🎯 • Configured Load Balancer listeners and <strong>target groups</strong> to direct traffic to the appropriate resources, enhancing overall application performance and availability.</p>	
 </div>
 
 	

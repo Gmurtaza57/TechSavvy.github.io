@@ -118,18 +118,19 @@
     <p>🛠 • Configured an ECS <strong>Task Definition for AWS Fargate</strong>.</p>
     <p>📡 • Created an ECS Cluster for Fargate.</p>
     <p>🚢 • Launched a Service using Fargate, involving configurations including VPC, security groups, and other network settings.</p>
-    <p>🔌 • Used <strong>ALB Application load balance</strong> to activate the app for <strong>20 minutes</strong> after AWS API Gateway trigger, saving $512 by not running 24/7.</p>
     <p>💾 • Allocated 4 vCPUs, 18 GiB soft memory, and 20 GiB hard memory limits.</p>
-    <p>📡 • Dynamic loading via <strong>API Gateway</strong> and <strong>Lambda</strong>. User visit API triggers Flask on Fargate.</p>
-    <p>⏱ • 1.5-minute delay during loading, giving status update to users for tasking loading.</p>
-    <p>🚀 • Used <strong>AWS Network load balance</strong> for consistent IP, ensuring reliable user connection for dynamic fargate ip issues.</p>
+    <p>📡 • Dynamic loading and Automation of app via <strong>API Gateway</strong> and <strong>Lambda function</strong>. User visit API which triggers lambda which starts & stop the task.</p>
+    <p>📡 • <strong>Lambda function</strong>activates the app for <strong>20 minutes</strong> after every API visit using <strong>CLoudWatch Events</strong> saving $512 by not running 24/7.</p></p>
+    <p>⏱ • Added HTML page in Lambda for 1.5-minute delay during starting of the task, giving update of time left to users for task to initiate.</p>
+    <p>🚀 • Used <strong>AWS Network load balance</strong> for consistent IP, ensuring reliable user connection for dynamic fargate ip issues.</p> 
     <p>🎯 • Load Balancer, <strong>listeners</strong>, and <strong>target groups</strong> optimize performance and availability.</p>	
+
 </div>
 
 	
 	<ul class="actions special">
         <li><a href="https://github.com/Gmurtaza57/Text_summary_using_hugging_face" class="button">View Project</a></li>
-        <li><a href="loading.html" class="button">Try Yourself</a></li>
+        <li><a href="https://46840du91k.execute-api.us-east-2.amazonaws.com/alb-integration/alb-integration" class="button">Try Yourself</a></li>
 	</ul>
 	<div class="thumbs-up" data-id="like34" onclick="incrementCounter(this)">&#128077;</div>
  	<div class="counter" data-id="like34">0</div>

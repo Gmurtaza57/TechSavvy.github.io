@@ -44,51 +44,51 @@
     
             <p class="center-block"><strong>                   📦 Data Extraction:</strong><p>
     
-            <p>•  Utilized UC Irvine Retail Sales Data with 1,067,372 records. Dataset Link: <a href="https://lnkd.in/ecSReh7q" target="_blank">here</a>.</p>
-            <p>•  Excel to CSV conversion.</p>
-            <p>•  Established warehouse, database, schema, and table in Snowflake for raw data.</p>
-            <p>•  Verified data integration on Snowflake with SQL Queries: <a href="https://github.com/Gmurtaza57/Retail_ETL_Pipeline/blob/main/Retail_Table_Queries_Snowflake.sql" target="_blank">Link for Code</a></p>
+            <p>•      Utilized UC Irvine Retail Sales Data with 1,067,372 records. Dataset Link: <a href="https://lnkd.in/ecSReh7q" target="_blank">here</a>.</p>
+            <p>•      Excel to CSV conversion.</p>
+            <p>•      Established warehouse, database, schema, and table in Snowflake for raw data.</p>
+            <p>•      Verified data integration on Snowflake with SQL Queries: <a href="https://github.com/Gmurtaza57/Retail_ETL_Pipeline/blob/main/Retail_Table_Queries_Snowflake.sql" target="_blank">Link for Code</a></p>
     
             <p class="center-block"><strong>                   🔄 Transformation:</strong></p>
     
-            <p>•  Snowflake to Alteryx connection via ODBC.</p>
-            <p>•  Alteryx Workflow: Null value handling (customerID set to -1, description set to "unknown").</p>
-            <p>•  80% threshold fuzzy match for description discrepancies.</p>
-            <p>•  Deduplication based on unique values.</p>
+            <p>•     Snowflake to Alteryx connection via ODBC.</p>
+            <p>•     Alteryx Workflow: Null value handling (customerID set to -1, description set to "unknown").</p>
+            <p>•     80% threshold fuzzy match for description discrepancies.</p>
+            <p>•     Deduplication based on unique values.</p>
     
             <p class="center-block"><strong>🔧 Feature Engineering:</strong><p>
     
-            <p>•  New columns for Day, Hour, Month for visualizations.</p>
-            <p>•  New columns for total spend and total return {Price*Quantity}.</p>
+            <p>•     New columns for Day, Hour, Month for visualizations.</p>
+            <p>•     New columns for total spend and total return {Price*Quantity}.</p>
             <button class="read-more-btn">Read More</button>
             <div class="project-details hidden">
             <p class="center-block"><strong>                   💾 Loading:</strong> </p>
     
-            <p>•  Data transferred to BigQuery using ODBC.</p>
-            <p>•  Updated BigQuery Table only if new records found using primary keys: invoice, customerID, stock code for matching.</p>
-            <p>•  Validated data ingestion with SQL queries in BigQuery. <a href="https://github.com/Gmurtaza57/Retail_ETL_Pipeline/blob/main/BigQuery_Retail_Verification.sql" target="_blank">Link for Code</a></p>
+            <p>•     Data transferred to BigQuery using ODBC.</p>
+            <p>•     Updated BigQuery Table only if new records found using primary keys: invoice, customerID, stock code for matching.</p>
+            <p>•     Validated data ingestion with SQL queries in BigQuery. <a href="https://github.com/Gmurtaza57/Retail_ETL_Pipeline/blob/main/BigQuery_Retail_Verification.sql" target="_blank">Link for Code</a></p>
     
             <p class="center-block"><strong>                   ⏲ Automation:</strong></p>
     
-            <p>•  Used Windows Task Scheduler & batch script to run my workflow to update database every Sunday at 3 a.m.</p>
-            <p>• Cost-effective alternative to paying for Alteryx cloud.</p>
+            <p>•     Used Windows Task Scheduler & batch script to run my workflow to update database every Sunday at 3 a.m.</p>
+            <p>•     Cost-effective alternative to paying for Alteryx cloud.</p>
     
             <p class="center-block"><strong>                  📊 Visualization with Tableau:</strong></p>
     
-            <p>•  Established a live connection between Tableau and BigQuery.</p>
-            <p>•  The setup ensures that as data in BigQuery updates when my workflow is run on Sunday at 3 a.m, visualizations in Tableau reflect the changes instantly.</p>
+            <p>•     Established a live connection between Tableau and BigQuery.</p>
+            <p>•     The setup ensures that as data in BigQuery updates when my workflow is run on Sunday at 3 a.m, visualizations in Tableau reflect the changes instantly.</p>
     
             <p class="center-block"><strong>                   Charts created:</strong></p>
     
-            <p>📈 Monthly sales & returns with dynamic filters.</p>
-            <p>•  Monthly breakdown that showcases both sales and returns with dynamic filter mechanism, for 'sales' and 'returns'.</p>
+            <p>📈    Monthly sales & returns with dynamic filters.</p>
+            <p>•     Monthly breakdown that showcases both sales and returns with dynamic filter mechanism, for 'sales' and 'returns'.</p>
     
-            <p>🔝 Top 5 products sold in Oct-Nov.</p>
-            <p>•  Leveraging the peak sales months of October and November, visualization was crafted to spotlight the top 5 products that experienced the highest sales.</p>
+            <p>🔝    Top 5 products sold in Oct-Nov.</p>
+            <p>•     Leveraging the peak sales months of October and November, visualization was crafted to spotlight the top 5 products that experienced the highest sales.</p>
     
-            <p>🌍 Country Wise sales distribution.</p>
-            <p>⏰ Peak sales hours pie chart.</p>
-            <p>📆 Day-wise sales.</p>
+            <p>🌍    Country Wise sales distribution.</p>
+            <p>⏰    Peak sales hours pie chart.</p>
+            <p>📆    Day-wise sales.</p>
             </div>
 
             <ul class="actions special">

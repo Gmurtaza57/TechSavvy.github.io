@@ -34,7 +34,7 @@
         <section class="posts">
             <article>
              <header>
-            <h2><a href="https://your_project_link_here.com">Retail Sales ETL Pipeline & Visualization Project Using Snowflake, Alteryx, BigQuery and Tableau</a></h2>
+            <h2><a href="https://your_project_link_here.com">Retail Sales ETL Pipeline u</a></h2>
             </header>
         <a href="#" class="image fit"><img src="images/retail_sales.jpg" alt="Retail Sales Visualization Image" /></a>
         <div class="project-section">
@@ -42,44 +42,42 @@
     
             <p><strong>Skills:</strong> Snowflake · Alteryx · BigQuery · Tableau · ODBC · SQL · Windows Task Scheduler · Data Warehousing · ETL</p>
     
-            <h3>📦 Data Extraction:</h3>
+            <p><strong>                   📦 Data Extraction:</strong><p>
     
             <p>•  Utilized UC Irvine Retail Sales Data with 1,067,372 records. Dataset Link: <a href="https://lnkd.in/ecSReh7q" target="_blank">here</a>.</p>
             <p>•  Excel to CSV conversion.</p>
             <p>•  Established warehouse, database, schema, and table in Snowflake for raw data.</p>
-            <p>•  Verified data integration on Snowflake with SQL Queries: <a href="https://lnkd.in/emQi8R5x" target="_blank">Link</a></p>
+            <p>•  Verified data integration on Snowflake with SQL Queries: <a href="https://github.com/Gmurtaza57/Retail_ETL_Pipeline/blob/main/Retail_Table_Queries_Snowflake.sql" target="_blank">Link for Code</a></p>
     
-            <h3>🔄 Transformation:</h3>
+            <p><strong>                   🔄 Transformation:</strong></p>
     
             <p>•  Snowflake to Alteryx connection via ODBC.</p>
             <p>•  Alteryx Workflow: Null value handling (customerID set to -1, description set to "unknown").</p>
             <p>•  80% threshold fuzzy match for description discrepancies.</p>
             <p>•  Deduplication based on unique values.</p>
     
-            <h3>🔧 Feature Engineering:</h3>
+            <p><stron>🔧 Feature Engineering:</stron><p>
     
             <p>•  New columns for Day, Hour, Month for visualizations.</p>
             <p>•  New columns for total spend and total return {Price*Quantity}.</p>
     
-            <p>View the Alteryx Workflow <a href="https://lnkd.in/eMvATvFb" target="_blank">here</a>.</p>
-    
-            <h3>💾 Loading:</h3>
+            <p><strong>                   💾 Loading:</strong> </p>
     
             <p>•  Data transferred to BigQuery using ODBC.</p>
             <p>•  Updated BigQuery Table only if new records found using primary keys: invoice, customerID, stock code for matching.</p>
-            <p>•  Validated data ingestion with SQL queries in BigQuery. <a href="https://lnkd.in/emQi8R5x" target="_blank">Link</a></p>
+            <p>•  Validated data ingestion with SQL queries in BigQuery. <a href="https://github.com/Gmurtaza57/Retail_ETL_Pipeline/blob/main/BigQuery_Retail_Verification.sql" target="_blank">Link for Code</a></p>
     
-            <h3>⏲ Automation:</h3>
+            <p><strong>                   ⏲ Automation:</strong></p>
     
             <p>•  Used Windows Task Scheduler & batch script to run my workflow to update database every Sunday at 3 a.m.</p>
             <p>• Cost-effective alternative to paying for Alteryx cloud.</p>
     
-            <h3>📊 Visualization with Tableau:</h3>
+            <p><strong>>                  📊 Visualization with Tableau:</strong></p>
     
             <p>•  Established a live connection between Tableau and BigQuery.</p>
             <p>•  The setup ensures that as data in BigQuery updates when my workflow is run on Sunday at 3 a.m, visualizations in Tableau reflect the changes instantly.</p>
     
-            <h4>Charts created:</h4>
+            <p><strong>                   Charts created:</strong></p>
     
             <p>📈 Monthly sales & returns with dynamic filters.</p>
             <p>•  Monthly breakdown that showcases both sales and returns with dynamic filter mechanism, for 'sales' and 'returns'.</p>
@@ -93,8 +91,8 @@
             </div>
 
             <ul class="actions special">
-            <li><a href="your_workflow_link_here" class="button">View Workflow</a></li>
-            <li><a href="your_dashboard_link_here" class="button">View Dashboard</a></li>
+            <li><a href="https://drive.google.com/file/d/1CJcaUyj5Hxe3wDrMoR5qjtcdTq3twp5d/view" class="button">View Workflow</a></li>
+            <li><a href="https://public.tableau.com/app/profile/ghulam.murtaza6680/viz/Retail_Sales_Analysis_16968579680730/Dashboard1" class="button">View Dashboard</a></li>
             </ul>
             <div class="thumbs-up" data-id="like101" onclick="incrementCounter(this)">&#128077;</div>
             <div class="counter" data-id="like101">0</div>

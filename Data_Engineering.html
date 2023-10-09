@@ -42,42 +42,42 @@
     
             <p><strong>Skills:</strong> Snowflake · Alteryx · BigQuery · Tableau · ODBC · SQL · Windows Task Scheduler · Data Warehousing · ETL</p>
     
-            <p><strong>                   📦 Data Extraction:</strong><p>
+            <p class="center-block"><strong>                   📦 Data Extraction:</strong><p>
     
             <p>•  Utilized UC Irvine Retail Sales Data with 1,067,372 records. Dataset Link: <a href="https://lnkd.in/ecSReh7q" target="_blank">here</a>.</p>
             <p>•  Excel to CSV conversion.</p>
             <p>•  Established warehouse, database, schema, and table in Snowflake for raw data.</p>
             <p>•  Verified data integration on Snowflake with SQL Queries: <a href="https://github.com/Gmurtaza57/Retail_ETL_Pipeline/blob/main/Retail_Table_Queries_Snowflake.sql" target="_blank">Link for Code</a></p>
     
-            <p><strong>                   🔄 Transformation:</strong></p>
+            <p class="center-block"><strong>                   🔄 Transformation:</strong></p>
     
             <p>•  Snowflake to Alteryx connection via ODBC.</p>
             <p>•  Alteryx Workflow: Null value handling (customerID set to -1, description set to "unknown").</p>
             <p>•  80% threshold fuzzy match for description discrepancies.</p>
             <p>•  Deduplication based on unique values.</p>
     
-            <p><stron>🔧 Feature Engineering:</stron><p>
+            <p class="center-block"><strong>🔧 Feature Engineering:</strong><p>
     
             <p>•  New columns for Day, Hour, Month for visualizations.</p>
             <p>•  New columns for total spend and total return {Price*Quantity}.</p>
     
-            <p><strong>                   💾 Loading:</strong> </p>
+            <p class="center-block"><strong>                   💾 Loading:</strong> </p>
     
-            <p>•  Data transferred to BigQuery using ODBC.</p>
+            <p class="center-block">•  Data transferred to BigQuery using ODBC.</p>
             <p>•  Updated BigQuery Table only if new records found using primary keys: invoice, customerID, stock code for matching.</p>
             <p>•  Validated data ingestion with SQL queries in BigQuery. <a href="https://github.com/Gmurtaza57/Retail_ETL_Pipeline/blob/main/BigQuery_Retail_Verification.sql" target="_blank">Link for Code</a></p>
     
-            <p><strong>                   ⏲ Automation:</strong></p>
+            <p class="center-block"><strong>                   ⏲ Automation:</strong></p>
     
             <p>•  Used Windows Task Scheduler & batch script to run my workflow to update database every Sunday at 3 a.m.</p>
             <p>• Cost-effective alternative to paying for Alteryx cloud.</p>
     
-            <p><strong>>                  📊 Visualization with Tableau:</strong></p>
+            <p class="center-block"><strong>>                  📊 Visualization with Tableau:</strong></p>
     
             <p>•  Established a live connection between Tableau and BigQuery.</p>
             <p>•  The setup ensures that as data in BigQuery updates when my workflow is run on Sunday at 3 a.m, visualizations in Tableau reflect the changes instantly.</p>
     
-            <p><strong>                   Charts created:</strong></p>
+            <p class="center-block"><strong>                   Charts created:</strong></p>
     
             <p>📈 Monthly sales & returns with dynamic filters.</p>
             <p>•  Monthly breakdown that showcases both sales and returns with dynamic filter mechanism, for 'sales' and 'returns'.</p>
@@ -225,7 +225,13 @@
     <footer id="footer">
         <!-- You can add footer details here... -->
     </footer>
-
+<style>
+    p.center-block {
+        width: 50%; /* or any desired width */
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>

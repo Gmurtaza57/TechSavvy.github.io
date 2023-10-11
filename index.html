@@ -13,6 +13,9 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="assets/js/firebase.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -72,7 +75,52 @@
 								
 									
 							</article>
-
+    <div class="chatbot">
+        <div class="chatbot-header" onclick="toggleChat()">
+            Get in Touch
+        </div>
+        <div class="chatbot-body">
+            <!-- Recruiter Question -->
+            <div id="recruiterQuestion">
+                <p>Are you a recruiter?</p>
+                <button onclick="showRecruiterFields()">Yes</button>
+                <button onclick="showNonRecruiterFields()">No</button>
+            </div>
+            
+            <!-- Fields for Recruiters -->
+            <div id="recruiterFields" style="display:none;">
+                <p>Name: <input type="text" id="name"></p>
+                <p>Email (optional): <input type="text" id="email"></p>
+                <p>Company Name: <input type="text" id="company"></p>
+                <p>How can I improve my portfolio. Please provide suggestions below</p>
+                <p>Feedback: <textarea id="feedback"></textarea></p>
+                <button onclick="submitRecruiterFeedback()">Submit</button>
+            </div>
+            
+            <!-- Fields for Non-Recruiters -->
+            <div id="nonRecruiterFields" style="display:none;">
+                <p>Name: <input type="text" id="nameNonRecruiter"></p>
+                <p>Email (optional): <input type="text" id="email"></p>
+                <p>How can I improve my portfolio. Please provide suggestions below</p>
+                <p>Feedback: <textarea id="feedbackNonRecruiter"></textarea></p>
+                <button onclick="submitNonRecruiterFeedback()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Thank you! Details have been saved in my NOSQL database. An automated email has been sent to the email provided as appreciation.</h3>
+       
+        <div class="image-container">
+            <img class="dal-image" src="bowing.jpeg" alt="Image 1">
+            <img class="dal-image" src="tea.jpeg" alt="Image 2">
+        </div>
+        
+        <h3>Images are created by OpenAI Dall-E 3</h3>
+    </div>
+</div>
 						<!-- Posts article 1-->
 							<!-- Machine Learning Project URL-->
 							<section class="posts">

@@ -9,31 +9,59 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 .chatbot {
-    position: fixed;
-    bottom: 0;
-    right: 20px;
-    width: 350px; /* Increased the width */
-    max-height: 600px; /* Increased the max height */
-    border: 1px solid #ddd;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-    border-radius: 10px 10px 0 0;
-    display: block;
-}
+            position: fixed;
+            bottom: 0;
+            right: 20px;
+            width: 300px;
+            max-height: 500px;
+            border: 1px solid #ddd;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            border-radius: 10px 10px 0 0;
+            display: block;
+            font-size: 16px; /* Adjusted font-size */
+            font-family: Arial, sans-serif; 
+        }
 
 .chatbot-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 18px; /* Adjusted the font size */
-}
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
 
 .chatbot-body {
-    max-height: 400px; /* Increased the max height for the body */
-    overflow-y: auto;
-    padding: 8px; /* Reduced padding */
-}
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        /* Input Styles */
+.chatbot input[type="text"], .chatbot input[type="email"] {
+            font-size: 16px;
+            width: 90%; /* Adjusted width */
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+
+        /* Button Styles */
+.chatbot button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+.chatbot button:hover {
+            background-color: #555;
+        }
 
 
 .modal {

@@ -8,21 +8,21 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-.chatbot {
+        .chatbot {
             position: fixed;
             bottom: 0;
             right: 20px;
             width: 300px;
-            max-height: 500px;
             border: 1px solid #ddd;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
             border-radius: 10px 10px 0 0;
-            display: block;
+            background-color: #ffffff;
             font-size: 16px; /* Adjusted font-size */
-            font-family: Arial, sans-serif; 
+	
+            font-family: Arial, sans-serif;
         }
 
-.chatbot-header {
+        .chatbot-header {
             background-color: #333;
             color: #fff;
             padding: 10px;
@@ -30,14 +30,12 @@
             font-weight: bold;
         }
 
-.chatbot-body {
-            max-height: 300px;
-            overflow-y: auto;
+        .chatbot-body {
             padding: 10px;
         }
 
         /* Input Styles */
-.chatbot input[type="text"], .chatbot input[type="email"] {
+        .chatbot input[type="text"], .chatbot input[type="email"] {
             font-size: 16px;
             width: 90%; /* Adjusted width */
             padding: 10px;
@@ -46,8 +44,6 @@
             box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
             border-radius: 5px;
         }
-
-        /* Button Styles */
 
 
 

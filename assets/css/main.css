@@ -10,7 +10,7 @@
 */
 /* General Chatbot Styles */
 .chatbot {
-    position: fixed;
+    position: relative;
     bottom: 0;
     right: 20px;
     width: 300px;

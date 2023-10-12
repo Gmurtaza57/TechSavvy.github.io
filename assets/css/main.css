@@ -8,43 +8,64 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-        .chatbot {
-            position: fixed;
-            bottom: 0;
-            right: 20px;
-            width: 300px;
-            border: 1px solid #ddd;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-            border-radius: 10px 10px 0 0;
-            background-color: #ffffff;
-            font-size: 16px; /* Adjusted font-size */
-	
-            font-family: Arial, sans-serif;
-        }
+/* General Chatbot Styles */
+.chatbot {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: 300px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    border-radius: 10px 10px 0 0;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
 
-        .chatbot-header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            cursor: pointer;
-            font-weight: bold;
-        }
+.chatbot-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
-        .chatbot-body {
-            padding: 10px;
-        }
+.chatbot-body {
+    padding: 10px;
+}
 
-        /* Input Styles */
-        .chatbot input[type="text"], .chatbot input[type="email"] {
-            font-size: 16px;
-            width: 90%; /* Adjusted width */
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
-            border-radius: 5px;
-        }
+/* Input Styles */
+.chatbot label {
+    display: block;
+    margin-bottom: 5px;
+}
 
+.chatbot input[type="text"], .chatbot input[type="email"], .chatbot textarea {
+    font-size: 16px;
+    width: 100%; /* Set width to 100% */
+    padding: 10px;
+    margin-bottom: 10px; /* Add a margin to the bottom for spacing */
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    box-sizing: border-box; /* This ensures padding and border are included in the width */
+}
+
+/* Button Styles */
+.chatbot button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chatbot button:hover {
+    background-color: #555;
+}
 
 
 .modal {

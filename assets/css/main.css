@@ -3327,7 +3327,7 @@ input, select, textarea {
 		-ms-transition: opacity 0.5s ease;
 		transition: opacity 0.5s ease;
 		position: relative;
-		z-index: 3;
+		z-index: 30;
 		overflow: hidden;
 	}
 
@@ -3413,7 +3413,7 @@ input, select, textarea {
 		position: relative;
 		cursor: default;
 		text-align: center;
-		z-index: 2;
+		z-index: 30;
 		min-height: 100vh;
 	}
 
@@ -3623,7 +3623,7 @@ input, select, textarea {
 		padding-bottom: 8rem;
 		position: relative;
 		text-align: center;
-		z-index: 2;
+		z-index: 30;
 	}
 
 		#header input, #header select, #header textarea {
@@ -3728,7 +3728,7 @@ input, select, textarea {
 		position: relative;
 		width: calc(100% - 4rem);
 		max-width: 72rem;
-		z-index: 2;
+		z-index: 30;
 	}
 
 		#nav ul.divided li {
@@ -3865,7 +3865,7 @@ input, select, textarea {
 		margin: 0 auto;
 		width: calc(100% - 4rem);
 		max-width: 72rem;
-		z-index: 2;
+		z-index: 30;
 	}
 
 		#main > * {
@@ -4064,7 +4064,7 @@ input, select, textarea {
 		margin: 0 auto;
 		width: calc(100% - 4rem);
 		max-width: 72rem;
-		z-index: 2;
+		z-index: 30;
 	}
 
 		#footer input, #footer select, #footer textarea {
@@ -4501,7 +4501,7 @@ input, select, textarea {
 		margin: 4rem auto 8rem auto;
 		width: calc(100% - 4rem);
 		max-width: 72rem;
-		z-index: 2;
+		z-index: 30;
 	}
 
 		#copyright input, #copyright select, #copyright textarea {

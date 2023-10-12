@@ -3343,7 +3343,7 @@ input, select, textarea {
 			background-position: center,								center,														top center;
 			background-repeat: repeat,								no-repeat,													no-repeat;
 			background-attachment: scroll,								scroll,														scroll;
-			z-index: 2;
+			z-index: 1;
 		}
 
 			#wrapper > .bg.fixed {
@@ -3413,7 +3413,7 @@ input, select, textarea {
 		position: relative;
 		cursor: default;
 		text-align: center;
-		z-index: 2;
+		z-index: 1;
 		min-height: 100vh;
 	}
 

@@ -48,20 +48,7 @@
         }
 
         /* Button Styles */
-.chatbot button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-.chatbot button:hover {
-            background-color: #555;
-        }
+
 
 
 .modal {

@@ -1,71 +1,7 @@
 
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
-.gm-chatbot {
-    position: fixed;
-    bottom: 0;
-    right: 20px;
-    width: 300px;
-    max-height: 500px;
-    border: 1px solid #ddd;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-    border-radius: 10px 10px 0 0;
-    display: block;
-    background-color: #ffffff; /* Setting background to pure white */
-}
 
-.gm-chatbot-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.gm-chatbot-body {
-    max-height: 300px;
-    overflow-y: auto;
-    padding: 10px;
-}
-
-.gm-modal {
-    display: none;
-    position: fixed;
-    z-index: 1002; /* Ensuring modal appears above other elements */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(202, 201, 201, 0.7);
-}
-
-.gm-modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 45%;
-}
-
-.gm-close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.gm-image-container {
-    display: flex;
-    justify-content: center;
-}
-
-.gm-dal-image {
-    width: 45%;   /* Adjust this value as needed */
-    max-width: 100%;
-    height: auto; /* This ensures the image maintains its aspect ratio */
-}
 
 /*
 	Massively by HTML5 UP

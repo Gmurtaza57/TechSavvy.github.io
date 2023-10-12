@@ -20,6 +20,7 @@
     background-color: #ffffff;
     font-size: 16px;
     font-family: Arial, sans-serif;
+    z-index: 0;
 }
 
 .chatbot-header {
@@ -3325,7 +3326,7 @@ input, select, textarea {
 		-ms-transition: opacity 0.5s ease;
 		transition: opacity 0.5s ease;
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 		overflow: hidden;
 	}
 
@@ -3341,7 +3342,7 @@ input, select, textarea {
 			background-position: center,								center,														top center;
 			background-repeat: repeat,								no-repeat,													no-repeat;
 			background-attachment: scroll,								scroll,														scroll;
-			z-index: 1;
+			z-index: 2;
 		}
 
 			#wrapper > .bg.fixed {
@@ -3411,7 +3412,7 @@ input, select, textarea {
 		position: relative;
 		cursor: default;
 		text-align: center;
-		z-index: 1;
+		z-index: 2;
 		min-height: 100vh;
 	}
 

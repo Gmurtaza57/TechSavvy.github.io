@@ -33,7 +33,9 @@
 .chatbot-body {
     padding: 10px;
 }
-
+.chatbot, .chatbot-header, .chatbot-body {
+    text-align: left;
+}
 /* Input Styles */
 .chatbot label {
     display: block;
@@ -56,8 +58,8 @@
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
+    background-color:#fff; 
+    color: #333; 
     border: none;
     border-radius: 5px;
     cursor: pointer;

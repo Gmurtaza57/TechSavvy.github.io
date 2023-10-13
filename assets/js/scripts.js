@@ -1,4 +1,4 @@
-// Your Firebase config object
+document.addEventListener("DOMContentLoaded", function() {// Your Firebase config object
 const firebaseConfig = {
     apiKey: "AIzaSyBgQLNMDVaaVKy6NhocXpU3ysqts8b-URg", // Add your API key here
     authDomain: "recruiters-be8ab.firebaseapp.com",
@@ -133,3 +133,9 @@ function getCurrentFormattedDate() {
     };
     return new Intl.DateTimeFormat('en-US', options).format(new Date());
 }
+    window.toggleChat = toggleChat;
+    window.showRecruiterFields = showRecruiterFields;
+    window.showNonRecruiterFields = showNonRecruiterFields;
+    window.submitRecruiterFeedback = submitRecruiterFeedback;
+    window.submitNonRecruiterFeedback = submitNonRecruiterFeedback;
+});

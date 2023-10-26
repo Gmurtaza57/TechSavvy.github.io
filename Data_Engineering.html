@@ -98,6 +98,58 @@
             <div class="thumbs-up" data-id="like101" onclick="incrementCounter(this)">&#128077;</div>
             <div class="counter" data-id="like101">0</div>
             </article>
+            
+    <article>
+    <header>
+        <h2><a href="https://github.com/Gmurtaza57/OTT_ETL_Pipeline">Azure-Based ETL Pipeline for OTT Platform Data</a></h2>
+    </header>
+    <a href="#" class="image fit"><img src="images/pipeline.png" alt="OTT Data Pipeline Visualization Image" /></a>
+    <div class="project-section">
+        <p>🔍 <strong>Project Overview:</strong> Developed an ETL pipeline for OTT platform data, focusing on data from popular platforms like Netflix, Disney+, and Prime.</p>
+        <p><strong>Tools & Platforms Used:</strong> Azure, Azure Datalake Storage Gen2, Azure Data Factory, Azure Synapse Analytics, Azure SQL Database, Azure Logic App, PowerBI, Azure DevOps Git, Microsoft SSMS, Email Notifications.</p>
+        
+        <p class="center-block"><strong>📦 Data Extraction:</strong></p>
+        <p>• Used a dummy dataset of OTT platforms from Kaggle.<br>
+        • Set up a budget in Azure to receive email alerts when expenses cross a threshold.<br>
+        • Initialized the Azure infrastructure with a resource group, Azure Datalake Storage Gen2, Azure Data Factory, Azure Synapse Analytics, and an Azure SQL Database.</p>
+
+        <p class="center-block"><strong>🔄 Azure Data Factory Ingestion:</strong></p>
+        <p>• Used a self-hosted runtime to transfer data from on-premise to Azure Data Lake Gen2.<br>
+        • Implemented Azure Key Vault for data security and linked services for data transfer between on-premise and cloud.<br>
+        • Developed pipelines to ingest data into a 'raw' folder in Azure Data Lake Gen2.<br>
+        • Implemented two incremental data loading strategies:<br>
+           a. Based on the 'last modified' timestamp of files.<br>
+           b. Utilizing date details from filenames like "2022-04-12 110513.455313" for specific day data ingestion.</p>
+        <button class="read-more-btn">Read More</button>
+        <div class="project-details hidden">
+        <p class="center-block"><strong>🔧 Efficiency Enhancements in Data Lake:</strong></p>
+        <p>• Introduced a method to segregate incoming data into date-specific folders, rather than one large 'raw' folder.<br>
+        • Leveraged this segregation in Azure Synapse to transform only the current day's data.</p>
+
+        <p class="center-block"><strong>🔧 Transformation and Loading:</strong></p>
+        <p>• Established a connection between Azure Datalake and Synapse Notebook, initializing a spark pool with three worker nodes for efficient code execution.<br>
+        • Performed data cleaning by handling NULL values, removing duplicates, change column types and feature engineering.<br>
+        • Saved the refined data in Datalake and transferred it to the SQL database. Full code available <a href="https://github.com/Gmurtaza57/OTT_ETL_Pipeline/blob/main/Notebook%201.ipynb" target="_blank">here</a>.</p>
+
+        <p class="center-block"><strong>⏲ Automation & Orchestration:</strong></p>
+        <p>• Orchestrated all pipelines for extract, load, and transform.<br>
+        • Set up triggers for daily execution at 12 pm.<br>
+        • Integrated Azure Logic App to send email notifications for every stage of pipeline failures,</p>
+
+        <p class="center-block"><strong>📊 Visualization with PowerBI:</strong></p>
+        <p>• Developed a PowerBI dashboard showcasing 4 charts.</p>
+
+        <p class="center-block"><strong>🚀 CI/CD Integration:</strong></p>
+        <p>• Configured a CI/CD pipeline in Azure DevOps Git for the aforementioned pipeline.<br>
+        • Added user Zaid Chaudhary to the DevOps Git project.<br>
+        • He created a new branch in the DevOps Git project, designed a new pipeline, and sent pull requests for review<br>
+        • Approved and merged the changes to the main branch of the project.</p>
+    </div>
+    <ul class="actions special">
+        <li><a href="https://github.com/Gmurtaza57/OTT_ETL_Pipeline" class="button">View Project</a></li>
+        <li><a href="https://drive.google.com/file/d/1NFWDjI0exh0iBmAMzKyKfTHgNXScyPjF/view?usp=sharing" class="button">View Dashboard</a></li>
+    </ul>
+</article>
 
 
 

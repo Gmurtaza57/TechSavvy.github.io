@@ -98,7 +98,57 @@
             <div class="thumbs-up" data-id="like101" onclick="incrementCounter(this)">&#128077;</div>
             <div class="counter" data-id="like101">0</div>
             </article>
-            
+    <article>
+    <header>
+        <h2><a href="https://github.com/Gmurtaza57/reddit_pipeline">AWS-Based ETL Pipeline for Reddit Data</a></h2>
+    </header>
+    <a href="#" class="image fit"><img src="images/reddit_pipeline.png" alt="Reddit Data Pipeline Visualization Image" /></a>
+    <div class="project-section">
+        <p>🔍 <strong>Project Overview:</strong> Crafted an ETL pipeline for Reddit data, specifically targeting the subreddit "MachineLearning".</p>
+        <p><strong>Tools & Platforms Used:</strong> Apache Airflow, Python, AWS S3, AWS Redshift, AWS Athena, AWS Glue, Tableau, PostgreSQL, Redis, Docker, PRAW, Pandas, Spark.</p>
+
+        <p class="center-block"><strong>📦 Data Extraction:</strong></p>
+        <p>• Connected to Reddit using PRAW with credentials stored securely.<br>
+        • Extracted top posts from the "MachineLearning" subreddit using filters for the time period and post limit of 100.</p>
+
+        <button class="read-more-btn">Read More</button>
+        <div class="project-details hidden">
+            <p class="center-block"><strong>🔄 Data Transformation:</strong></p>
+            <p>• Employed Pandas and NumPy to handle data cleaning tasks like converting timestamps and handling boolean data types.<br>
+            • Created a new 'tag_type' field from post titles.</p>
+
+            <p class="center-block"><strong>🔧 AWS S3 Integration:</strong></p>
+            <p>• Configured AWS S3 bucket for structured 'raw' data storage.<br>
+            • Uploaded transformed data to S3 using S3FS.</p>
+
+            <p class="center-block"><strong>⏲ Automation & Orchestration:</strong></p>
+            <p>• Set up an Airflow DAG to manage the workflow and automated the ETL process to run daily at 12 a.m.<br>
+            • Utilized Redis and PostgreSQL for message brokering and as a result backend.</p>
+
+            <p class="center-block"><strong>🔄 Data Processing in AWS:</strong></p>
+            <p>• AWS Glue detects new data and performs quality checks and data cleaning.</p>
+
+            <p class="center-block"><strong>💾 AWS Transformation:</strong></p>
+            <p>• An AWS Glue Crawler is scheduled to run at 2 AM daily for database and schema updates.</p>
+
+            <p class="center-block"><strong>🔍 Data Validation and De-duplication:</strong></p>
+            <p>• An additional pipeline checks for duplicates after the AWS Glue Crawler updates.</p>
+
+            <p class="center-block"><strong>📈 Visualization:</strong></p>
+            <p>• Switched to Amazon Redshift for a live connection to update the Tableau dashboard with new S3 data.</p>
+
+            <p class="center-block"><strong>🔗 Version Control:</strong></p>
+            <p>• GitHub is used for version control of the ETL pipeline logs and DAGs.</p>
+        </div>
+        <ul class="actions special">
+            <li><a href="https://github.com/Gmurtaza57/reddit_pipeline" class="button">View Project</a></li>
+            <li><a href="https://public.tableau.com/app/profile/ghulam.murtaza6680/viz/Reddit_pipeline_dashboard/Dashboard1" class="button">View Dashboard</a></li>
+        </ul>
+        <div class="thumbs-up" data-id="like121" onclick="incrementCounter(this)">&#128077;</div>
+        <div class="counter" data-id="like121">0</div>
+    </div>
+</article>
+        
     <article>
     <header>
         <h2><a href="https://github.com/Gmurtaza57/OTT_ETL_Pipeline">Azure-Based ETL Pipeline for OTT Platform Data</a></h2>

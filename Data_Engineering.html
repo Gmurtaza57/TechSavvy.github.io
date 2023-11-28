@@ -98,6 +98,99 @@
             <div class="counter" data-id="like101">0</div>
             </article>
     <article>
+    <article>
+    <header>
+        <h2><a href="https://github.com/Gmurtaza57/Realtime_Socket_Engineering">🚀 Realtime Socket Streaming Using Apache Spark, Kafka, Elastic Search and Kibana</a></h2>
+    </header>
+    <a href="#" class="image fit"><img src="images/socket.png" alt="Retail Sales Visualization Image" /></a>
+    <div class="project-section">
+        <p><strong>Tools and Technologies Used:</strong></p>
+        <ul>
+            <li>TCP/IP Socket</li>
+            <li>Apache Spark</li>
+            <li>OpenAI Large Language Model (LLM)</li>
+            <li>Kafka</li>
+            <li>Elasticsearch</li>
+            <li>Kibana</li>
+            <li>Docker</li>
+        </ul>
+
+        <p><strong>Data:</strong></p>
+        <p>Yelp Dataset 7 million records (~10 GB)</p>
+
+        <p><strong>Overview:</strong></p>
+        <p>Real-time Sentiment Analysis of 7 million records by streaming on TCP/IP socket connection. Using Apache Spark for sentiment analysis with LLM, streaming to Kafka, indexing to Elasticsearch, and visualizing in Kibana.</p>
+    </div>
+
+    <!-- Data Streaming -->
+    <div class="project-section">
+        <h3>Data Streaming (streaming-socket.py)</h3>
+        <ul>
+            <li>Socket Setup: Created a socket to stream Yelp reviews (host: 0.0.0.0, port: 9999).</li>
+            <li>Throttled Streaming: 87-second delay between data chunks (2 records) for controlled streaming.</li>
+            <li>Limitations: Due to cost considerations and OpenAI API limits, streaming is currently limited to 1000 records per day.</li>
+            <li>Error Handling: Implemented handling for disconnections and errors like BrokenPipeError, ConnectionResetError.</li>
+        </ul>
+    </div>
+
+    <!-- Spark Streaming with LLM -->
+    <div class="project-section">
+        <h3>Spark Streaming with LLM (ChatGPT) (SparkSession Script)</h3>
+        <ul>
+            <li>Streaming Context Configuration: Set up Spark StreamingContext for real-time processing.</li>
+            <li>Schema Definition: Defined structured schema for Yelp review data and transformed raw JSON data into a structured DataFrame (stream_df).</li>
+            <li>Sentiment Analysis: Applied sentiment analysis using OpenAI's API for ChatGPT model to categorize every review into Positive, Negative, Neutral before streaming to Kafka.</li>
+            <li>Kafka Integration: Prepared and wrote transformed data to the Kafka topic "customer_review."</li>
+            <li>Error Handling: Implemented strong error handling for continuous operation.</li>
+        </ul>
+    </div>
+
+    <!-- Dockerized Spark Cluster Configuration -->
+    <div class="project-section">
+        <h3>Dockerized Spark Cluster Configuration (docker-compose.yml)</h3>
+        <ul>
+            <li>Docker-compose Configuration: Defined services for 1 Spark master and 1 worker node with 2 GB memory.</li>
+            <li>Communication Setup: Ensured communication between Spark components.</li>
+        </ul>
+    </div>
+
+    <!-- Kafka and Elastic Search Environment Creation -->
+    <div class="project-section">
+        <h3>Kafka and Elastic Search Environment Creation</h3>
+        <ul>
+            <li>Kafka Cluster Creation: Demonstrated the step-by-step process of establishing a Kafka cluster using Confluent Kafka.</li>
+            <li>Created a connection to Elastic search using Elastic Sink Connector and consumed the real-time data of Kafka to Elastic Search.</li>
+        </ul>
+    </div>
+
+    <!-- Elasticsearch Indexing -->
+    <div class="project-section">
+        <h3>Elasticsearch Indexing</h3>
+        <ul>
+            <li>Processed data indexed into Elasticsearch. Code for queries <a href="https://github.com/Gmurtaza57/Realtime_Socket_Engineering/blob/main/elastic_search_query.JSON">here</a>.</li>
+        </ul>
+    </div>
+
+    <!-- Kibana Dashboard Highlights -->
+    <div class="project-section">
+        <h3>Kibana Dashboard Highlights</h3>
+        <ul>
+            <li>Count of Positive, Negative, and Neutral Reviews.</li>
+            <li>KPI for the count of each star rating.</li>
+            <li>Top 5 Restaurants based on Positive and Negative Reviews.</li>
+        </ul>
+    </div>
+            <ul class="actions special">
+            <li><a href="https://github.com/Gmurtaza57/Realtime_Socket_Engineering" class="button">View Project</a></li>
+            <li><a href="https://streaming-project.kb.us-central1.gcp.cloud.es.io:9243/app/dashboards#/view/e6e27520-8cc9-11ee-9592-0b822a033eb0?_g=(refreshInterval%3A(pause%3A!t%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-15m%2Cto%3Anow))" class="button">View Kibana Dashboard</a></li>
+        </ul>
+        <div class="thumbs-up" data-id="like151" onclick="incrementCounter(this)">&#128077;</div>
+        <div class="counter" data-id="like151">0</div>
+    </div>
+
+    <!-- Hashtags -->
+
+</article>
     <header>
         <h2><a href="https://github.com/Gmurtaza57/reddit_pipeline">AWS-Based ETL Pipeline for Reddit Data</a></h2>
     </header>

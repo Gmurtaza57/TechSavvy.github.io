@@ -107,58 +107,58 @@
         <p>TCP/IP Socket, Apache Spark, OpenAI Large Language Model LLM, Kafka, Elastic Search, Kibana , Docker</p>
 
         <p><strong>Data:</strong></p>
-        <p>Yelp Dataset 7 million records (~10 GB)</p>
+        <p>- Yelp Dataset 7 million records (~10 GB)</p>
 
         <p><strong>Overview:</strong></p>
-        <p>Real-time Sentiment Analysis of 7 million records by streaming on TCP/IP socket connection. Using Apache Spark for sentiment analysis with LLM, streaming to Kafka, indexing to Elasticsearch, and visualizing in Kibana.</p>
+        <p>- Real-time Sentiment Analysis of 7 million records by streaming on TCP/IP socket connection. Using Apache Spark for sentiment analysis with LLM, streaming to Kafka, indexing to Elasticsearch, and visualizing in Kibana.</p>
     </div>
 
     <!-- Data Streaming -->
     <div class="project-section">
-        <h3>Data Streaming (streaming-socket.py)</h3>
-        <p>Socket Setup: Created a socket to stream Yelp reviews (host: 0.0.0.0, port: 9999).</p>
-        <p>Throttled Streaming: 87-second delay between data chunks (2 records) for controlled streaming.</p>
-        <p>Limitations: Due to cost considerations and OpenAI API limits, streaming is currently limited to 1000 records per day.</p>
-        <p>Error Handling: Implemented handling for disconnections and errors like BrokenPipeError, ConnectionResetError.</p>
-    </div>
-
-    <!-- Spark Streaming with LLM -->
-    <div class="project-section">
-        <h3>Spark Streaming with LLM (ChatGPT) (SparkSession Script)</h3>
-        <p>Streaming Context Configuration: Set up Spark StreamingContext for real-time processing.</p>
-        <p>Schema Definition: Defined structured schema for Yelp review data and transformed raw JSON data into a structured DataFrame (stream_df).</p>
-        <p>Sentiment Analysis: Applied sentiment analysis using OpenAI's API for ChatGPT model to categorize every review into Positive, Negative, Neutral before streaming to Kafka.</p>
-        <p>Kafka Integration: Prepared and wrote transformed data to the Kafka topic "customer_review."</p>
-        <p>Error Handling: Implemented strong error handling for continuous operation.</p>
+        <h3>- Data Streaming (streaming-socket.py)</h3>
+        <p>-  Socket Setup: Created a socket to stream Yelp reviews (host: 0.0.0.0, port: 9999).</p>
+        <p>-  Throttled Streaming: 87-second delay between data chunks (2 records) for controlled streaming.</p>
+        <p>-  Limitations: Due to cost considerations and OpenAI API limits, streaming is currently limited to 1000 records per day.</p>
+        <p>-  Error Handling: Implemented handling for disconnections and errors like BrokenPipeError, ConnectionResetError.</p>
     </div>
     <button class="read-more-btn">Read More</button>
     <div class="project-details hidden">
+    <!-- Spark Streaming with LLM -->
+    <div class="project-section">
+        <h3>- Spark Streaming with LLM (ChatGPT) (SparkSession Script)</h3>
+        <p>-  Streaming Context Configuration: Set up Spark StreamingContext for real-time processing.</p>
+        <p>-  Schema Definition: Defined structured schema for Yelp review data and transformed raw JSON data into a structured DataFrame (stream_df).</p>
+        <p>-  Sentiment Analysis: Applied sentiment analysis using OpenAI's API for ChatGPT model to categorize every review into Positive, Negative, Neutral before streaming to Kafka.</p>
+        <p>-  Kafka Integration: Prepared and wrote transformed data to the Kafka topic "customer_review."</p>
+        <p>-  Error Handling: Implemented strong error handling for continuous operation.</p>
+    </div>
+
     <!-- Dockerized Spark Cluster Configuration -->
     <div class="project-section">
-        <h3>Dockerized Spark Cluster Configuration (docker-compose.yml)</h3>
-        <p>Docker-compose Configuration: Defined services for 1 Spark master and 1 worker node with 2 GB memory.</p>
-        <p>Communication Setup: Ensured communication between Spark components.</p>
+        <h3>-  Dockerized Spark Cluster Configuration (docker-compose.yml)</h3>
+        <p>-   Docker-compose Configuration: Defined services for 1 Spark master and 1 worker node with 2 GB memory.</p>
+        <p>-   Communication Setup: Ensured communication between Spark components.</p>
     </div>
 
     <!-- Kafka and Elastic Search Environment Creation -->
     <div class="project-section">
         <h3>Kafka and Elastic Search Environment Creation</h3>
-        <p>Kafka Cluster Creation: Demonstrated the step-by-step process of establishing a Kafka cluster using Confluent Kafka.</p>
-        <p>Created a connection to Elastic search using Elastic Sink Connector and consumed the real-time data of Kafka to Elastic Search.</p>
+        <p>-  Kafka Cluster Creation: Demonstrated the step-by-step process of establishing a Kafka cluster using Confluent Kafka.</p>
+        <p>-  Created a connection to Elastic search using Elastic Sink Connector and consumed the real-time data of Kafka to Elastic Search.</p>
     </div>
 
     <!-- Elasticsearch Indexing -->
     <div class="project-section">
         <h3>Elasticsearch Indexing</h3>
-        <p>Processed data indexed into Elasticsearch. Code for queries <a href="https://github.com/Gmurtaza57/Realtime_Socket_Engineering/blob/main/elastic_search_query.JSON">here</a>.</p>
+        <p>-  Processed data indexed into Elasticsearch. Code for queries <a href="https://github.com/Gmurtaza57/Realtime_Socket_Engineering/blob/main/elastic_search_query.JSON">here</a>.</p>
     </div>
 
     <!-- Kibana Dashboard Highlights -->
     <div class="project-section">
         <h3>Kibana Dashboard Highlights</h3>
-        <p>Count of Positive, Negative, and Neutral Reviews.</p>
-        <p>KPI for the count of each star rating.</p>
-        <p>Top 5 Restaurants based on Positive and Negative Reviews.</p>
+        <p>- Count of Positive, Negative, and Neutral Reviews.</p>
+        <p>- KPI for the count of each star rating.</p>
+        <p>- Top 5 Restaurants based on Positive and Negative Reviews.</p>
     </div>
     </div>
     <ul class="actions special">
